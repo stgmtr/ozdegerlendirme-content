@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
-  accept_roles: #optional - accepts all users if left out
-    - admin
+  # accept_roles: #optional - accepts all users if left out
+  #   - admin
 
 media_folder: "static/media" # Folder where user uploaded files should go
 publish_mode: editorial_workflow
