@@ -1,0 +1,2 @@
+# HAK TEMELLİ YAKLAŞIM
+

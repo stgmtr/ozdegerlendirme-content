@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: uirmaksever/ozdegerlendirme-content # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+media_folder: "static/media" # Folder where user uploaded files should go
+publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "Recipes" # Used in routes, e.g., /admin/collections/:slug/edit
+    label: "recipe" # Used in the UI, e.g., "New Post"
+    folder: "answer_texts" # The path to the folder where the documents are stored
+    create: no # Allow users to create new documents in this collection
+    slug: "{{question_id}}/{{choice_id}}"
+    
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Question ID", name: "question_id", widget: "string"}
+      - {label: "Choice ID", name: "choice_id", widget: "string"}
